@@ -1,0 +1,6 @@
+recaptcha:
+  secretKey: secret-code
+  siteKey: site-secret
+  siteVerifyUrl: http://google-captcha-verify-url
+  secretKeyParam: secret-param
+  responseParam: response-param
