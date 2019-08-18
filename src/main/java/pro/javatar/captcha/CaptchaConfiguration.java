@@ -13,6 +13,7 @@ public class CaptchaConfiguration {
     public static final String RECAPTCHA_RESPONSE = "g-recaptcha-response";
     private String secretKeyParam = "secretKey";
     private String responseParam = "response";
+    private boolean isEnabled = true;
     private String siteVerifyUrl = "https://www.google.com/recaptcha/api/siteverify";
     private String secretKey;
     private String siteKey;
@@ -56,5 +57,13 @@ public class CaptchaConfiguration {
 
     public void setSiteKey(String siteKey) {
         this.siteKey = siteKey;
+    }
+
+    public boolean isEnabled() {
+        return isEnabled;
+    }
+
+    public void setEnabled(boolean enabled) {
+        isEnabled = enabled;
     }
 }
