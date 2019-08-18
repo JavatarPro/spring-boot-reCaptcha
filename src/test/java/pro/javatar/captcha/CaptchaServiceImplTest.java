@@ -38,8 +38,10 @@ public class CaptchaServiceImplTest {
     @MockBean
     private RestTemplate restTemplate;
 
-    private URI uri;
+    @Autowired
+    private CaptchaConfiguration config;
 
+    private URI uri;
 
     @Before
     public void setUp() {
@@ -82,6 +84,15 @@ public class CaptchaServiceImplTest {
         String expectedUrl = "http://google-captcha-verify-url?secret-param=secret-code&response-param=" + CAPTCHA_DATA;
 
         assertThat(uri.toString(), is(expectedUrl));
+    }
+
+    @Test
+    public void disableCaptcha(){
+        config.setEnabled(false);
+
+        captchaService.validate(CAPTCHA_DATA);
+
+        verify(restTemplate, times(0)).postForObject(eq(uri), isNull(), eq(CaptchaResponse.class));
     }
 
     private CaptchaResponse createCaptchaResponse() {
