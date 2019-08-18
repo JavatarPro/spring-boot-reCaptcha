@@ -4,3 +4,5 @@ recaptcha:
   siteVerifyUrl: http://google-captcha-verify-url
   secretKeyParam: secret-param
   responseParam: response-param
+
+logging.level.pro.javatar.captcha: DEBUG

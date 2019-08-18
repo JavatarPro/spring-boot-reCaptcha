@@ -68,4 +68,16 @@ class CaptchaResponse {
     public void setErrors(List<String> errors) {
         this.errors = errors;
     }
+
+    @Override
+    public String toString() {
+        return "CaptchaResponse{" +
+                       "success=" + success +
+                       ", challenge=" + challenge +
+                       ", hostname='" + hostname + '\'' +
+                       ", score=" + score +
+                       ", packageName='" + packageName + '\'' +
+                       ", errors=" + errors +
+                       '}';
+    }
 }
