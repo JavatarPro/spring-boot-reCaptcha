@@ -5,7 +5,7 @@
 
     <groupId>pro.javatar</groupId>
     <artifactId>spring-boot-reCaptcha</artifactId>
-    <version>0.3</version>
+    <version>0.4-SNAPSHOT</version>
     <name>spring-boot-reCaptcha</name>
 
     <properties>
