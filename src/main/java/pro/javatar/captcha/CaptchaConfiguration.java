@@ -11,7 +11,7 @@ import org.springframework.context.annotation.Configuration;
 @ConfigurationProperties(prefix = "recaptcha")
 public class CaptchaConfiguration {
     public static final String RECAPTCHA_RESPONSE = "g-recaptcha-response";
-    private String secretKeyParam = "secretKey";
+    private String secretKeyParam = "secret";
     private String responseParam = "response";
     private boolean isEnabled = true;
     private String siteVerifyUrl = "https://www.google.com/recaptcha/api/siteverify";
